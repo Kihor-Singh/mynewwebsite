@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: it-company-site
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn it_company_site.wsgi
+    plan: free
